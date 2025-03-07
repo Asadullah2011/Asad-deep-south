@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Deep South</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="container"></div>
+
+		<!-- Container für den Inhalt der Seite -->
+		<div class="content">
+			<h1 class="heading">Deep South</h1>
+			<div class="button-container">
+				<button class="btn" onclick="showCard('history')">History</button>
+				<button class="btn" onclick="showCard('sports')">Sports</button>
+				<button class="btn" onclick="showCard('animals')">
+					Tiere und Pflanzen
+				</button>
+				<button class="btn" onclick="showCard('native')">
+					Native Americans
+				</button>
+				<button class="btn" onclick="showCard('disasters')">
+					Nature Disasters
+				</button>
+			</div>
+
+			<!-- Container für die Karten -->
+			<div class="cards-container">
+				<div class="card" id="history-card">
+					<h2>History</h2>
+          <div class="images">
+					<img src="./assets/hystory-deep.jpg" alt="History Image" />
+					<img src="./assets/hystory-deep-2.webp" alt="History Image" />
+          </div>
+					<p>Informationen über die Geschichte des Deep South.</p>
+					<a href="#" class="more-info">Thema</a>
+				</div>
+
+				<div class="card" id="sports-card">
+					<h2>Sports</h2>
+					<img src="sports.jpg" alt="Sports Image" />
+					<p>Informationen über die Sportarten im Deep South.</p>
+					<a href="#" class="more-info">Thema</a>
+				</div>
+
+				<div class="card" id="animals-card">
+					<h2>Tiere und Pflanzen</h2>
+					<img src="animals.jpg" alt="Animals Image" />
+					<p>Informationen über Tiere und Pflanzen im Deep South.</p>
+					<a href="#" class="more-info">Thema</a>
+				</div>
+
+				<div class="card" id="native-card">
+					<h2>Native Americans</h2>
+					<img src="native.jpg" alt="Native Americans Image" />
+					<p>Informationen über die Ureinwohner des Deep South.</p>
+					<a href="#" class="more-info">Thema</a>
+				</div>
+
+				<div class="card" id="disasters-card">
+					<h2>Nature Disasters</h2>
+					<img src="disasters.jpg" alt="Disasters Image" />
+					<p>Informationen über Naturkatastrophen im Deep South.</p>
+					<a href="#" class="more-info">Thema</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Funktion zum Anzeigen der jeweiligen Karte
+			function showCard(cardId) {
+				// Alle Karten ausblenden
+				const cards = document.querySelectorAll('.card')
+				cards.forEach(card => {
+					card.style.display = 'none' // Ausblenden der Karten
+					card.classList.remove('animate-card')
+				})
+
+				// Die angeklickte Karte anzeigen mit Animation
+				const card = document.getElementById(`${cardId}-card`)
+				card.style.display = 'block' // Sichtbar machen der gewählten Karte
+				setTimeout(() => {
+					card.classList.add('animate-card')
+				}, 50) // Kleine Verzögerung für die Animation
+			}
+
+			// Initial keine Karte anzeigen
+			document.addEventListener('DOMContentLoaded', function () {
+				// Stelle sicher, dass keine Karte angezeigt wird, wenn die Seite geladen wird.
+				const cards = document.querySelectorAll('.card')
+				cards.forEach(card => {
+					card.style.display = 'none' // Keine Karte sichtbar beim Seitenladen
+				})
+			})
+		</script>
+	</body>
+</html>
