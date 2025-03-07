@@ -187,8 +187,9 @@ body {
 
 
 .card {
-  width: 300px;
-  height: 400px;
+  width: 100%;
+  height: fit-content;
+  max-height: 600px;
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
   border-radius: 20px;
   padding: 20px;
@@ -204,9 +205,14 @@ body {
 .card h2 {
   margin-bottom: 20px;
 }
-
-.card img {
+.images{
+  display: flex;
   width: 100%;
+  justify-content: space-around;
+}
+
+.images img {
+  width: 400px;
   height: auto;
   border-radius: 10px;
 }
