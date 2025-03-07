@@ -17,5 +17,5 @@ function showCard(cardId) {
 
 // Initial keine Karte anzeigen
 document.addEventListener('DOMContentLoaded', function() {
-  // Keine Karte wird angezeigt, bis ein Button gedrückt wird.
+
 });
