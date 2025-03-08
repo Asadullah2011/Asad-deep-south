@@ -1,3 +1,6 @@
+const card = document.querySelector('.card')
+
+
 // Funktion zum Anzeigen der jeweiligen Karte
 function showCard(cardId) {
   // Alle Karten ausblenden
@@ -5,6 +8,7 @@ function showCard(cardId) {
   cards.forEach(card => {
     card.style.display = 'none';
     card.classList.remove('animate-card');
+
   });
 
   // Die angeklickte Karte anzeigen mit Animation

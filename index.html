@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Deep South</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
 		<div class="container"></div>
@@ -34,7 +34,10 @@
 					<img src="./assets/hystory-deep.jpg" alt="History Image" />
 					<img src="./assets/hystory-deep-2.webp" alt="History Image" />
           </div>
-					<p>Informationen über die Geschichte des Deep South.</p>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, dolor odit a nesciunt quis eaque aspernatur nihil delectus debitis ex? Velit, sint. Dolores quidem natus quia harum explicabo? Beatae, numquam Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatem molestias facilis. Non perferendis, officia eaque hic voluptate ducimus ipsam consectetur asperiores tempora minima quisquam voluptas ipsa a itaque deserunt.
+			
+				
+					</p>
 					<a href="#" class="more-info">Thema</a>
 				</div>
 
@@ -68,32 +71,6 @@
 			</div>
 		</div>
 
-		<script>
-			// Funktion zum Anzeigen der jeweiligen Karte
-			function showCard(cardId) {
-				// Alle Karten ausblenden
-				const cards = document.querySelectorAll('.card')
-				cards.forEach(card => {
-					card.style.display = 'none' // Ausblenden der Karten
-					card.classList.remove('animate-card')
-				})
-
-				// Die angeklickte Karte anzeigen mit Animation
-				const card = document.getElementById(`${cardId}-card`)
-				card.style.display = 'block' // Sichtbar machen der gewählten Karte
-				setTimeout(() => {
-					card.classList.add('animate-card')
-				}, 50) // Kleine Verzögerung für die Animation
-			}
-
-			// Initial keine Karte anzeigen
-			document.addEventListener('DOMContentLoaded', function () {
-				// Stelle sicher, dass keine Karte angezeigt wird, wenn die Seite geladen wird.
-				const cards = document.querySelectorAll('.card')
-				cards.forEach(card => {
-					card.style.display = 'none' // Keine Karte sichtbar beim Seitenladen
-				})
-			})
-		</script>
+		<script src='./js/script.js'></script>
 	</body>
 </html>
